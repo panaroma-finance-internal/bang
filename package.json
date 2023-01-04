@@ -2,17 +2,16 @@
   "name": "bang",
   "license": "UNLICENSED",
   "scripts": {
-    "codegen": "graph codegen",
+    "codegen": "graph codegen --output-dir src/types/",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ debo24/bang",
+    "deploy": "graph deploy --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ debo24/bang",
     "create-local": "graph create --node http://localhost:8020/ debo24/bang",
     "remove-local": "graph remove --node http://localhost:8020/ debo24/bang",
     "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 debo24/bang",
     "test": "graph test"
   },
   "dependencies": {
-    "@graphprotocol/graph-cli": "0.37.1",
-    "@graphprotocol/graph-ts": "0.28.1"
-  },
-  "devDependencies": { "matchstick-as": "0.5.0" }
+    "@graphprotocol/graph-cli": "0.18.0",
+    "@graphprotocol/graph-ts": "0.18.0"
+  }
 }
